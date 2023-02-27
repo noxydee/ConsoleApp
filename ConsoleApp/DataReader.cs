@@ -54,7 +54,7 @@
             {
                 Console.WriteLine($"Database '{database.Name}' ({database.NumberOfChildren} tables)");
 
-                foreach (ImportedObject table in importedObjects.Where(x => x.ParentType.EqualsIgnoreCase(database.Type)))
+                foreach (ImportedObject table in importedObjects.Where(x => x.ParentType.EqualsIgnoreCase(database.Type) && database.Name.EqualsIgnoreCase(x.ParentName)))
                 {
                     Console.WriteLine($"\tTable '{table.Schema}.{table.Name}' ({table.NumberOfChildren} columns)");
 

@@ -11,7 +11,7 @@
         public string ParentType { get; set; }
         public string DataType { get; set; }
         public string IsNullable { get; set; }
-        public double NumberOfChildren { get; set; }
+        public int NumberOfChildren { get; set; }
 
         public ImportedObject(string[] values)
         {
